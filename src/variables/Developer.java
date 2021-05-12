@@ -23,7 +23,7 @@ public class Developer {
 	private byte numEmpleado;
 	/** Dias de vacaciones del empleado */
 	private byte diasVacaciones;
-
+	
 	/**
 	 * Constructor que recibe el nombre del empleado
 	 * 

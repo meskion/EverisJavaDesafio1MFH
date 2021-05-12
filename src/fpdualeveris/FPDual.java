@@ -1,11 +1,7 @@
 package fpdualeveris;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import variables.Developer;
 
@@ -17,7 +13,7 @@ public class FPDual {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
+		
 		variablesChallenge();
 		/* Descomentar la siguiente linea y comentar la anterior para probar otra manera de realizar el desafio */
 //		 variablesChallengeALT();
