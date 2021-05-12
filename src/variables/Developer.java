@@ -31,6 +31,9 @@ public class Developer {
 	 *            nombre del empleado
 	 */
 	public Developer(String nombre) {
+		if (totalEmpleados == MAXEMPLEADOS)
+			throw new DevLimitException("Limite de programadores sobrepasado");
+		
 		this.nombre = nombre;
 		this.diasVacaciones = MAXVACACIONES;
 		this.numEmpleado = totalEmpleados++;
