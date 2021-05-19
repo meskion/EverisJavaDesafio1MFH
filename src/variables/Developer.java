@@ -23,7 +23,7 @@ public class Developer {
 	private byte numEmpleado;
 	/** Dias de vacaciones del empleado */
 	private byte diasVacaciones;
-	
+
 	/**
 	 * Constructor que recibe el nombre del empleado
 	 * 
@@ -33,7 +33,7 @@ public class Developer {
 	public Developer(String nombre) {
 		if (totalEmpleados == MAXEMPLEADOS)
 			throw new DevLimitException("Limite de programadores sobrepasado");
-		
+
 		this.nombre = nombre;
 		this.diasVacaciones = MAXVACACIONES;
 		this.numEmpleado = totalEmpleados++;
@@ -45,6 +45,7 @@ public class Developer {
 	 * @param nombre
 	 *            nombre del empleado
 	 * @param diasVacaciones
+	 *            Dias de vacaciones del empleado
 	 */
 	public Developer(String nombre, int diasVacaciones) {
 		this(nombre);
@@ -54,14 +55,14 @@ public class Developer {
 	}
 
 	/**
-	 * @return the totalEmpleados
+	 * @return Total de empleados
 	 */
 	public static byte getTotalEmpleados() {
 		return totalEmpleados;
 	}
 
 	/**
-	 * @return el nombre del empleado
+	 * @return nombre del empleado
 	 */
 	public String getNombre() {
 		return nombre;
@@ -93,11 +94,12 @@ public class Developer {
 	}
 
 	/**
-	 * Version del metodo en el que no permito que los dias lleguen a valores negativos, dejando el 0 como valor mínimo de los dias de vacaciones.
-	 * Deprecado pues no es la implementación que quiero que se use.
+	 * Version del metodo en el que no permito que los dias lleguen a valores negativos, dejando el 0 como valor mínimo de los dias de vacaciones. Deprecado
+	 * pues no es la implementación que quiero que se use.
+	 * 
 	 * @param diasUtilizados
 	 */
-	@Deprecated
+
 	public void disminuirVacacionesAlt(int diasUtilizados) {
 		int diasRestantes = diasVacaciones - Math.abs(diasUtilizados);
 		diasVacaciones = (diasRestantes >= 0) ? (byte) (diasRestantes) : 0;
